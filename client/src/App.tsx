@@ -1,17 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
+import { Header, Main } from './components';
 import { Home, CreatePost } from './pages';
-import { Header } from './components';
 
-type Props = {};
-
-const App = ({}: Props) => {
+const App = () => {
   return (
     <>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<CreatePost />} />
-      </Routes>
+      <Main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create" element={<CreatePost />} />
+        </Routes>
+      </Main>
     </>
   );
 };
